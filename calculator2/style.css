@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif; /* Updated font family */
+}
+
+body {
+    background-color: #f3f4f6; /* Light background */
+}
+
+.container {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mybox {
+    position: relative;
+    top: 3rem;
+    background-color: #292b2c; /* Dark background */
+    width: 22rem;
+    height: 28rem;
+    border: 2px solid #343a40; /* Dark border */
+    border-radius: 10px;
+    color: #ffffff; /* White text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Navigation */
+.nav {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+#dark, #light {
+    cursor: pointer;
+}
+
+/* Bottom Section */
+.bot {
+    width: calc(100% + 4px); /* Adjust for border width */
+    margin-top: 9.1rem;
+    background-color: #343a40; /* Darker background */
+    height: 60%;
+    border: 2px solid #343a40; /* Dark border */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden; /* Hide overflowing grid */
+}
+
+.bot__inner {
+    margin-top: 0.7rem;
+    margin-left: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    background-color: #495057; /* Darker background for buttons */
+    color: #ffffff; /* White text */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Button shadow */
+}
+
+.item:hover {
+    background-color: #6c757d; /* Darker hover background */
+}
+
+/* Specific styles for operators and special buttons */
+#ac, #c {
+    color: #007bff; /* Blue color for AC and C */
+}
+
+#mod, #divide, #mul, #minus, #plus, #equal {
+    background-color: #ffc107; /* Yellow background for operators */
+    color: #212529; /* Dark text color */
+}
+
+#equal {
+    background-color: #dc3545; /* Red background for equals */
+}
+
+#zero {
+    grid-column: span 2; /* Span two columns */
+}
+
+/* Expression and Result */
+.mid {
+    position: relative;
+    top: 9rem;
+}
+
+.expression, .result {
+    height: 3rem;
+    padding: 0.5rem 1rem;
+    text-align: end;
+    font-size: 1.5rem;
+    overflow: hidden; /* Hide overflow */
+}
+
+.expression p, .result p {
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap; /* Prevent line break */
+}
+
+.result {
+    margin-top: 5px;
+    color: #dc3545; /* Red color for result */
+}
